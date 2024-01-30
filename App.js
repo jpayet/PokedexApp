@@ -1,10 +1,10 @@
 import {NavigationContainer} from "@react-navigation/native";
-import PokemonListStack from './Navigation/Navigation';
+import TabsNavigation from './Navigation/Navigation';
 
 export default function App() {
   return (
       <NavigationContainer>
-        <PokemonListStack />
+        <TabsNavigation />
       </NavigationContainer>
   );
 }

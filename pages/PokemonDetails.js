@@ -7,8 +7,7 @@ export default function PokemonDetails({route, navigation}) {
 
     const {id} = route.params;
     const [pokemon, setPokemon] = useState([]);
-    const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`;
-    console.log(pokemonImage)
+    const pokemonImageGIF = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`;
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -21,7 +20,7 @@ export default function PokemonDetails({route, navigation}) {
 
     return (
         <View style={styles.parentBox}>
-            <Image style={styles.image} source={{uri: pokemonImage}}/>
+            <Image style={styles.image} source={{uri: pokemonImageGIF}}/>
             <Text>{id}</Text>
             <Text>Nom: {pokemon.name}</Text>
             <Text>Taille : {pokemon.height}</Text>
