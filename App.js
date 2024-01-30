@@ -1,7 +1,10 @@
-import Home from './pages/Home'
+import {NavigationContainer} from "@react-navigation/native";
+import PokemonListStack from './Navigation/Navigation';
 
 export default function App() {
   return (
-      <Home />
+      <NavigationContainer>
+        <PokemonListStack />
+      </NavigationContainer>
   );
 }

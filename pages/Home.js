@@ -1,12 +1,12 @@
 //Libraries
 import {StatusBar} from 'expo-status-bar';
 import {useEffect, useState} from "react";
-import {FlatList, SafeAreaView, StyleSheet} from 'react-native';
+import {FlatList, SafeAreaView, StyleSheet, Text, View, Button} from 'react-native';
 
 //Pages
 import PokemonCard from "../components/pokemonCard";
 
-export default function Home(){
+export default function Home({navigation}){
 
     const [pokeDatas, setPokeDatas] = useState([]);
     const [nextPage, setNextPage] = useState([]);
@@ -36,7 +36,7 @@ export default function Home(){
             <FlatList
                 numColumns={3}
                 data={pokeDatas}
-                renderItem={({item}) => <PokemonCard name={item.name} url={item.url}/>}
+                renderItem={({item}) => <PokemonCard name={item.name} url={item.url} navigation={navigation}/>}
                 keyExtractor={item => item.name}
                 onEndReached={fetchMoreData}
                 onEndReachedThreshold={0.5}
