@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230cd566-f50d-48af-a4d5-212d12f5b31f" name="Changes" comment="feat: Infinite scroll">
-      <change afterPath="$PROJECT_DIR$/Navigation/Navigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/MyTeam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/PokemonDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Settings.js" afterDir="false" />
+    <list default="true" id="230cd566-f50d-48af-a4d5-212d12f5b31f" name="Changes" comment="feat: Bottom Tabs Navigation ['Home', 'Search', 'MyTeam', Settings']">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pokemonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/pokemonCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +72,7 @@
       <workItem from="1706604668477" duration="22000" />
       <workItem from="1706604691916" duration="870000" />
       <workItem from="1706605617467" duration="439000" />
+      <workItem from="1706685953824" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Initiate React Native Expo project">
       <option name="closed" value="true" />
@@ -99,7 +90,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706606294494</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Stack Navigation ['Home' TO 'PokemonDetails' Screen]">
+      <option name="closed" value="true" />
+      <created>1706607481924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706607481924</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Bottom Tabs Navigation ['Home', 'Search', 'MyTeam', Settings']">
+      <option name="closed" value="true" />
+      <created>1706607769036</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706607769036</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +116,8 @@
     <MESSAGE value="feat: Initiate React Native Expo project" />
     <MESSAGE value="feat: Scrollable list of pokemon" />
     <MESSAGE value="feat: Infinite scroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Infinite scroll" />
+    <MESSAGE value="feat: Stack Navigation ['Home' TO 'PokemonDetails' Screen]" />
+    <MESSAGE value="feat: Bottom Tabs Navigation ['Home', 'Search', 'MyTeam', Settings']" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Bottom Tabs Navigation ['Home', 'Search', 'MyTeam', Settings']" />
   </component>
 </project>
