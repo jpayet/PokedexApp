@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230cd566-f50d-48af-a4d5-212d12f5b31f" name="Changes" comment="" />
+    <list default="true" id="230cd566-f50d-48af-a4d5-212d12f5b31f" name="Changes" comment="feat: Stack Navigation ['Home' TO 'PokemonDetails' Screen]">
+      <change afterPath="$PROJECT_DIR$/pages/MyTeam.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/PokemonDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PokemonDetails.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +20,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,21 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "feature",
-    "last_opened_file_path": "C:/xampp/htdocs/www/pokedex",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/www/pokedex&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\www\pokedex" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\www\pokedex" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,11 +76,44 @@
       <option name="presentableId" value="Default" />
       <updated>1706604664616</updated>
       <workItem from="1706604668477" duration="22000" />
-      <workItem from="1706604691916" duration="376000" />
+      <workItem from="1706604691916" duration="870000" />
+      <workItem from="1706605617467" duration="439000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Initiate React Native Expo project">
+      <option name="closed" value="true" />
+      <created>1706605500284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706605500284</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Infinite scroll">
+      <option name="closed" value="true" />
+      <created>1706606294494</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706606294494</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Stack Navigation ['Home' TO 'PokemonDetails' Screen]">
+      <option name="closed" value="true" />
+      <created>1706607481924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706607481924</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Initiate React Native Expo project" />
+    <MESSAGE value="feat: Scrollable list of pokemon" />
+    <MESSAGE value="feat: Infinite scroll" />
+    <MESSAGE value="feat: Stack Navigation ['Home' TO 'PokemonDetails' Screen]" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Stack Navigation ['Home' TO 'PokemonDetails' Screen]" />
   </component>
 </project>
