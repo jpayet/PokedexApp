@@ -9,15 +9,27 @@ import PokemonCard from "../components/pokemonCard";
 export default function Home(){
 
     const [pokeDatas, setPokeDatas] = useState([]);
+    const [nextPage, setNextPage] = useState([]);
 
     useEffect(() => {
         fetch('https://pokeapi.co/api/v2/pokemon')
             .then(response => response.json())
             .then(json => {
+                setNextPage(json.next)
                 setPokeDatas(json.results)
             })
             .catch(error => console.error(error));
     }, []);
+
+    const fetchMoreData = () => {
+        fetch(nextPage.toString())
+            .then(response => response.json())
+            .then(json => {
+                setNextPage(json.next)
+                setPokeDatas([...pokeDatas, ...json.results])
+            })
+            .catch(error => console.error(error));
+    }
 
     return (
         <SafeAreaView style={styles.pokemonsList}>
@@ -26,6 +38,8 @@ export default function Home(){
                 data={pokeDatas}
                 renderItem={({item}) => <PokemonCard name={item.name} url={item.url}/>}
                 keyExtractor={item => item.name}
+                onEndReached={fetchMoreData}
+                onEndReachedThreshold={0.5}
             />
             <StatusBar style="auto" />
         </SafeAreaView>
