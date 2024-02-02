@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230cd566-f50d-48af-a4d5-212d12f5b31f" name="Changes" comment="feat: Bottom Tabs Navigation ['Home', 'Search', 'MyTeam', Settings']">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="230cd566-f50d-48af-a4d5-212d12f5b31f" name="Changes" comment="feat: Bottom Tabs Navigation ['Home', 'Search', 'MyTeam', Settings']" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +71,7 @@
       <workItem from="1706604691916" duration="870000" />
       <workItem from="1706605617467" duration="439000" />
       <workItem from="1706685953824" duration="6000" />
+      <workItem from="1706857745138" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Initiate React Native Expo project">
       <option name="closed" value="true" />
@@ -106,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706607769036</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: Bottom Tabs Navigation ['Home', 'Search', 'MyTeam', Settings']">
+      <option name="closed" value="true" />
+      <created>1706857825403</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706857825403</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
