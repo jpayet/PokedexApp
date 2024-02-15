@@ -1,12 +1,14 @@
 import {StatusBar} from 'expo-status-bar';
-import {StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import PokemonCard from "../components/pokemonCard";
+import React from "react";
 
 export default function MyTeam({}) {
     return (
-        <View>
+        <SafeAreaView>
             <Text>Mon équipe</Text>
             <StatusBar style="auto" />
-        </View>
+        </SafeAreaView>
     );
 }
 

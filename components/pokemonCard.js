@@ -1,14 +1,24 @@
 //Libraries
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {View, Image, Text, StyleSheet, TouchableOpacity} from "react-native";
 
-export default function PokemonCard({name, url, navigation}) {
+export default function PokemonCard({name, url, idPokemon, navigation}) {
+    const [uid, setUid] = useState('')
 
-    const id = url.split('/')[url.split('/').length - 2];
-    const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+    useEffect(() => {
+        if(idPokemon === ""){
+            const uid = url.split('/')[url.split('/').length - 2];
+            setUid(uid);
+        } else{
+            const uid = idPokemon;
+            setUid(uid);
+        }
+    }, []);
+
+    const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${uid}.png`;
 
     return (
-        <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('PokemonDetailsScreen', {id:id})}>
+        <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('PokemonDetailsScreen', {id:uid})}>
             <Image style={styles.image} source={{uri: image}}/>
             <View style={styles.titleDiv}>
                 <Text style={styles.title}>{name}</Text>

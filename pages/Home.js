@@ -3,7 +3,7 @@ import {StatusBar} from 'expo-status-bar';
 import {useEffect, useState} from "react";
 import {FlatList, SafeAreaView, StyleSheet, Text, View, Button} from 'react-native';
 
-//Pages
+//Composants
 import PokemonCard from "../components/pokemonCard";
 
 export default function Home({navigation}){
@@ -36,7 +36,7 @@ export default function Home({navigation}){
             <FlatList
                 numColumns={3}
                 data={pokeDatas}
-                renderItem={({item}) => <PokemonCard name={item.name} url={item.url} navigation={navigation}/>}
+                renderItem={({item}) => <PokemonCard name={item.name} url={item.url} idPokemon="" navigation={navigation}/>}
                 keyExtractor={item => item.name}
                 onEndReached={fetchMoreData}
                 onEndReachedThreshold={0.5}
