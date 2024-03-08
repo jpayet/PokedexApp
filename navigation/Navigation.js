@@ -2,6 +2,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Image} from "react-native";
 
 //Pages
 import HomeScreen from '../pages/Home';
@@ -10,13 +11,12 @@ import SearchScreen from '../pages/Search';
 import MyTeamScreen from '../pages/MyTeam';
 import SettingsScreen from '../pages/Settings';
 
-//Variables
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function PokemonListStack() {
+function PokemonAllListStack() {
     return (
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="HomeScreen">
             <Stack.Screen name="HomeScreen" component={HomeScreen} options={{
                 title: "Liste des pokémons",
             }}/>
@@ -27,24 +27,46 @@ function PokemonListStack() {
     );
 }
 
-function TabsNavigation() {
+function PokemonTeamStack() {
+    return (
+        <Stack.Navigator >
+            <Stack.Screen name="MyTeamScreen" component={MyTeamScreen} options={{
+                title: "",
+                headerShown: false
+            }}/>
+            <Stack.Screen name="PokemonDetailsScreen" component={PokemonDetailsScreen} options={{
+                title: "Informations du pokémon"
+            }} />
+        </Stack.Navigator>
+    );
+}
+
+function TabsNavigation({navigation, route}) {
     return (
         <Tab.Navigator>
-            <Tab.Screen name="PokemonListStack" component={PokemonListStack} options={{
-                title: "Pokedex",
+            <Tab.Screen name="PokemonListStack" component={PokemonAllListStack} options={{
+                headerTitle: () => (
+                    <Image source={require('../assets/images/logo_pokedex.png')} style={{width: 150, height: 50}}/>
+                ),
+                title: "Pokemons",
                 headerStyle: {
                     backgroundColor: '#ab0505',
+                    height: 110,
                 },
                 headerTintColor: '#ffffff',
                 headerTitleStyle: {
                     fontSize: 20,
                     fontWeight: "bold",
-                }
+                },
             }}/>
             <Tab.Screen name="SearchScreen" component={SearchScreen} options={{
+                headerTitle: () => (
+                    <Image source={require('../assets/images/logo_pokedex.png')} style={{width: 150, height: 50}}/>
+                ),
                 title: "Rechercher",
                 headerStyle: {
                     backgroundColor: '#ab0505',
+                    height: 110,
                 },
                 headerTintColor: '#ffffff',
                 headerTitleStyle: {
@@ -52,21 +74,29 @@ function TabsNavigation() {
                     fontWeight: "bold",
                 }
             }}/>
-            <Tab.Screen name="MyTeamScreen" component={MyTeamScreen} options={{
+            <Tab.Screen name="PokemonTeamStack" component={PokemonTeamStack} options={{
+                headerTitle: () => (
+                    <Image source={require('../assets/images/logo_pokedex.png')} style={{width: 150, height: 50}}/>
+                ),
                 title: "Mon équipe",
                 headerStyle: {
                     backgroundColor: '#ab0505',
+                    height: 110,
                 },
                 headerTintColor: '#ffffff',
                 headerTitleStyle: {
                     fontSize: 20,
                     fontWeight: "bold",
-                }
+                },
             }}/>
             <Tab.Screen name="SettingsScreen" component={SettingsScreen} options={{
+                headerTitle: () => (
+                    <Image source={require('../assets/images/logo_pokedex.png')} style={{width: 150, height: 50}}/>
+                ),
                 title: "Paramètres",
                 headerStyle: {
                     backgroundColor: '#ab0505',
+                    height: 110,
                 },
                 headerTintColor: '#ffffff',
                 headerTitleStyle: {
