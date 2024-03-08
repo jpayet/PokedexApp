@@ -1,18 +1,26 @@
 import {StatusBar} from 'expo-status-bar';
-import {StyleSheet, TextInput, SafeAreaView, Button, View, Image, Text, FlatList} from 'react-native';
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
+import {
+    StyleSheet,
+    TextInput,
+    SafeAreaView,
+    View,
+    Image,
+    Text,
+    TouchableOpacity,
+    Pressable
+} from 'react-native';
 
 //Composants
 import PokemonCard from "../components/pokemonCard";
 
 export default function MyTeam({navigation}) {
-
     const [searchValue, onChangeText] = useState("");
     const [returnText, setReturnText] = useState("");
     const [pokemon, setPokemon] = useState([]);
     const [pokemonImage, setPokemonImage] = useState("");
 
-    async function searchPokemon(pokemonName){
+    const searchPokemon = async (pokemonName) => {
         try {
 
             if(pokemonName){
@@ -45,7 +53,7 @@ export default function MyTeam({navigation}) {
         }
     }
 
-    function eraseFormSearch(){
+    const eraseFormSearch = () => {
         onChangeText("")
         setReturnText("")
         setPokemon([])
@@ -55,25 +63,36 @@ export default function MyTeam({navigation}) {
     return (
         <SafeAreaView>
             <View>
-                <TextInput
-                    style={styles.input}
-                    onChangeText={onChangeText}
-                    value={searchValue}
-                    placeholder="Rechercher"
-                />
-                <Button
-                    title="Rechercher"
-                    onPress={() => searchPokemon(searchValue)}
-                />
-                <Button
-                    title="Effacer la recherche"
-                    onPress={() => eraseFormSearch()}
-                />
+                <View>
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={onChangeText}
+                        value={searchValue}
+                        placeholder="Pikachu"
+                    />
+                    <Pressable onPress={eraseFormSearch}>
+                        <Image
+                            style={styles.eraseForm}
+                            source={require('../assets/images/close.png')}
+                        />
+                    </Pressable>
+                </View>
+                <TouchableOpacity style={styles.btnSearch} onPress={() => searchPokemon(searchValue)}>
+                    <Text style={styles.btnTextSearch}>Rechercher</Text>
+                </TouchableOpacity>
+
             </View>
-            <View>
+            <View style={styles.resultSearch}>
                 {pokemonImage !== "" ?
                     <SafeAreaView>
-                        <PokemonCard name={pokemon.name} url={pokemon.url} idPokemon={pokemon.id} navigation={navigation}/>
+                        <PokemonCard
+                            pokemonData={{
+                                name: pokemon.name,
+                                url: pokemon.url,
+                                id: pokemon.id,
+                            }}
+                            navigation={navigation}
+                        />
                         <StatusBar style="auto" />
                     </SafeAreaView>
                 :
@@ -97,4 +116,31 @@ const styles = StyleSheet.create({
         width: 100,
         height: 100,
     },
+    resultSearch: {
+        margin: 20,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    eraseForm: {
+        position: "absolute",
+        top: -49.5,
+        right: 17,
+        width: 35,
+        height: 35,
+    },
+    btnSearch: {
+        backgroundColor: "#ab0505",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: 12,
+        padding: 10,
+        borderRadius: 50,
+    },
+    btnTextSearch: {
+        fontSize: 16,
+        color: "white",
+        fontWeight: "bold",
+    }
 });
