@@ -8,10 +8,10 @@ export default function Settings({navigation}) {
                     <Text style={styles.rowTitle}>Mon Profil</Text>
                     <Image style={styles.rowImage} source={require('../assets/images/icon-arrow-right.png')}/>
             </TouchableOpacity>
-            <View style={styles.rowContainerUnclickable}>
-                <Text style={styles.rowTitle}>Thème</Text>
+            <TouchableOpacity style={styles.rowContainer} onPress={() => navigation.navigate('AppAppearenceScreen')}>
+                <Text style={styles.rowTitle}>Apparence de l'application</Text>
                 <Image style={styles.rowImage} source={require('../assets/images/icon-arrow-right.png')}/>
-            </View>
+            </TouchableOpacity>
             <View style={styles.rowContainerUnclickable}>
                 <Text style={styles.rowTitle}>Notifications</Text>
                 <Image style={styles.rowImage} source={require('../assets/images/icon-arrow-right.png')}/>

@@ -11,6 +11,7 @@ import SearchScreen from '../pages/Search';
 import MyTeamScreen from '../pages/MyTeam';
 import SettingsScreen from '../pages/Settings';
 import MyProfilScreen from '../pages/MyProfil';
+import AppAppearenceScreen from '../pages/AppAppearence';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -51,6 +52,9 @@ function SettingsStack() {
             }}/>
             <Stack.Screen name="MyProfilScreen" component={MyProfilScreen} options={{
                 title: "Mon profil"
+            }} />
+            <Stack.Screen name="AppAppearenceScreen" component={AppAppearenceScreen} options={{
+                title: "Apparence de l'application"
             }} />
         </Stack.Navigator>
     );
