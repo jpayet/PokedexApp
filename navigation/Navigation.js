@@ -10,6 +10,7 @@ import PokemonDetailsScreen from '../pages/PokemonDetails';
 import SearchScreen from '../pages/Search';
 import MyTeamScreen from '../pages/MyTeam';
 import SettingsScreen from '../pages/Settings';
+import MyProfilScreen from '../pages/MyProfil';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -36,6 +37,20 @@ function PokemonTeamStack() {
             }}/>
             <Stack.Screen name="PokemonDetailsScreen" component={PokemonDetailsScreen} options={{
                 title: "Informations du pokémon"
+            }} />
+        </Stack.Navigator>
+    );
+}
+
+function SettingsStack() {
+    return (
+        <Stack.Navigator >
+            <Stack.Screen name="SettingsScreen" component={SettingsScreen} options={{
+                title: "",
+                headerShown: false,
+            }}/>
+            <Stack.Screen name="MyProfilScreen" component={MyProfilScreen} options={{
+                title: "Mon profil"
             }} />
         </Stack.Navigator>
     );
@@ -98,7 +113,7 @@ function TabsNavigation({navigation, route}) {
                     <Image source={require('../assets/images/nav-team.png')} style={{width: 30, height: 30}}/>
                 ),
             }}/>
-            <Tab.Screen name="SettingsScreen" component={SettingsScreen} options={{
+            <Tab.Screen name="SettingsStack" component={SettingsStack} options={{
                 headerTitle: () => (
                     <Image source={require('../assets/images/logo_pokedex.png')} style={{width: 150, height: 50}}/>
                 ),
